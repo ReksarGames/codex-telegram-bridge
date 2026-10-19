@@ -1,0 +1,6 @@
+# Secrets live ONLY in ~/.config/codex-telegram-bridge/gateway.toml (0600).
+# Enter a newly issued BotFather token using codex-bridge setup, never in a command line.
+token = "ENTER_LOCALLY_WITH_SETUP"
+user_id = 0 # Required: setup asks for your numeric Telegram User ID.
+whisper = "/home/YOUR_USER/.local/share/codex-telegram-bridge/bin/whisper-cli"
+whisper_model = "/home/YOUR_USER/.local/share/codex-telegram-bridge/models/ggml-small.bin"

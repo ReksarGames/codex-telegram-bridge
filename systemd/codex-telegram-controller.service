@@ -1,0 +1,24 @@
+[Unit]
+Description=Codex Telegram controller
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/codex-telegram-bridge/venv/bin/python -m codex_bridge controller
+Environment=PATH=%h/.local/bin:/usr/bin
+UMask=0077
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=20
+KillMode=control-group
+NoNewPrivileges=yes
+LimitCORE=0
+RuntimeDirectory=codex-telegram-bridge
+RuntimeDirectoryMode=0700
+RuntimeDirectoryPreserve=restart
+MemoryMax=8G
+TasksMax=256
+
+[Install]
+WantedBy=default.target

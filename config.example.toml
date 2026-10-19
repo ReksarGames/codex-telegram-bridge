@@ -1,0 +1,14 @@
+# Controller configuration: copy LOCALLY with permissions 0600; prefer setup wizard.
+user_id = 0 # Required: setup asks for your numeric Telegram User ID.
+# Setup asks whether to send final replies and generated images to Telegram.
+mirror_results = false
+
+[[projects]]
+id = "game"
+name = "GameProject"
+path = "/home/YOUR_USER/Projects/GameProject"
+
+[[projects]]
+id = "backend"
+name = "Backend"
+path = "/home/YOUR_USER/Projects/Backend"
